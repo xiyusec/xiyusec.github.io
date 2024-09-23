@@ -1,2 +1,2 @@
-{{ partialCached "scripts/global.html" . }}
-{{ partial "scripts/plugins.html" . }}
+{{ $js := resources.Get "js/index.js" | js.Build }}
+<script src="{{ $js.RelPermalink }}" defer></script>
